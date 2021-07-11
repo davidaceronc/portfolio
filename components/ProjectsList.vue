@@ -1,17 +1,19 @@
 <template>
   <div class="projects-list-container">
-    <div>
-      <h2>{{ project.name }}</h2>
-      <p>{{ project.description }}</p>
-    </div>
+    <ProjectCard
+      v-for="(project, index) in projects"
+      :key="index"
+      :project="project"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Prop } from "nuxt-property-decorator";
+import ProjectCard from "@/components/ProjectCard.vue";
 import { Project } from "~/utils/interfaces";
 
-@Component({ components: {} })
+@Component({ components: { ProjectCard } })
 export default class ProjectsList extends Vue {
   @Prop({ required: true }) projects: Project[] = [];
 
