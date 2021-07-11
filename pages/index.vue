@@ -1,13 +1,20 @@
 <template>
-  <div>Projects</div>
+  <ProjectsList :projects="projects" />
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
+import ProjectsList from "@/components/ProjectsList.vue";
+import { projects } from "@/utils/projects";
+import { Project } from "~/utils/interfaces";
+
 @Component({
-  components: {},
+  components: {
+    ProjectsList,
+  },
 })
 export default class ProjectsPage extends Vue {
+  projects: Project[] = projects;
 }
 </script>
 
