@@ -15,7 +15,7 @@ import { Project } from "~/utils/interfaces";
 
 @Component({ components: { ProjectCard } })
 export default class ProjectsList extends Vue {
-  @Prop({ required: true }) projects: Project[] = [];
+  @Prop({ required: true }) projects: Project[];
 
   mounted() {
     console.log(this.projects);

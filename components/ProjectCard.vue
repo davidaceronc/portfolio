@@ -4,8 +4,8 @@
       <h2>{{ project.name }}</h2>
       <p>{{ project.description }}</p>
       <div class="project-links">
-        <ProjectButton text="Source Code" icon="mail" />
-        <ProjectButton text="Website" icon="mail" />
+        <ProjectButton text="Source Code" icon="mdi-iframe" />
+        <ProjectButton text="Website" icon="mdi-eye" />
       </div>
     </div>
     <div class="project-preview">
@@ -21,7 +21,7 @@ import { Project } from "~/utils/interfaces";
 
 @Component({ components: { ProjectButton } })
 export default class ProjectCard extends Vue {
-  @Prop({ required: true }) project: Project | null = null;
+  @Prop({ required: true }) project: Project;
 
   mounted() {
     console.log(this.project);
@@ -80,6 +80,8 @@ export default class ProjectCard extends Vue {
     width: 100%;
     height: auto;
     background-color: bisque;
+    display: flex;
+    align-items: center;
     .image-preview {
       max-width: 100%;
     }
