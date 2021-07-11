@@ -2,10 +2,14 @@
   <div v-if="project" class="project-card-container">
     <div class="project-info">
       <h2>{{ project.name }}</h2>
-      <p>{{ project.description }}</p>
+      <div>
+        <p>{{ project.description }}</p>
+        <p>{{ project.value }}</p>
+      </div>
+      <p><strong>{{ project.technologies.join(' | ')}}</strong></p>
       <div class="project-links">
-        <ProjectButton text="Source Code" icon="mdi-iframe" />
-        <ProjectButton text="Website" icon="mdi-eye" />
+        <ProjectButton v-if='project.repository' text="Source Code" icon="mdi-iframe" @click='goTo(project.repository)' />
+        <ProjectButton v-if='project.website' text="Website" icon="mdi-eye" @click='goTo(project.website)' />
       </div>
     </div>
     <div class="project-preview">
@@ -25,6 +29,10 @@ export default class ProjectCard extends Vue {
 
   mounted() {
     console.log(this.project);
+  }
+
+  goTo(link: string) {
+    window.open(link,'_blank');
   }
 }
 </script>
@@ -47,7 +55,6 @@ export default class ProjectCard extends Vue {
 
   &:hover {
     box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.3), 0 1em 2em rgba(0, 0, 0, 0.3);
-    //font-size: 1.1em;
     margin-top: -5px;
   }
 
@@ -62,10 +69,8 @@ export default class ProjectCard extends Vue {
       max-width: 480px;
     }
     h2 {
-      margin: 0 0 15px;
-    }
-    p {
-      font-size: 1.3em;
+      font-size: 2.0em;
+      //margin: 0 0 15px;
     }
     .project-links {
       display: flex;

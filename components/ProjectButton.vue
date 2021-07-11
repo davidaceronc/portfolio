@@ -1,5 +1,5 @@
 <template>
-  <v-btn class="primary project-button-container">
+  <v-btn class="primary project-button-container" @click='$emit("click")'>
     <v-icon v-if='icon' class='mr-2'>
       {{ icon }}
     </v-icon>
