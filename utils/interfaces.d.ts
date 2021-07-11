@@ -5,4 +5,5 @@ export interface Project {
   technologies: string[];
   repository?: string;
   website?: string;
+  preview: string;
 }

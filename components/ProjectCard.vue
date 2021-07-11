@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="project-preview">
-      <img class="image-preview" src="@/static/Translate.gif" alt="Translate" />
+      <img class="image-preview" :src="`/${project.preview}`" alt="Translate" />
     </div>
   </div>
 </template>
