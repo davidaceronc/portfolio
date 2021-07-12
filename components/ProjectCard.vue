@@ -1,21 +1,21 @@
 <template>
-  <div v-if="project" class="project-card-container">
-    <div class="project-info">
-      <h3>{{ project.name }}</h3>
-      <div>
-        <p>{{ project.description }}</p>
-        <p>{{ project.value }}</p>
-      </div>
-      <p><strong>{{ project.technologies.join(' | ')}}</strong></p>
-      <div class="project-links">
-        <ProjectButton v-if='project.repository' text="Source Code" icon="mdi-iframe" @click='goTo(project.repository)' />
-        <ProjectButton v-if='project.website' text="Website" icon="mdi-eye" @click='goTo(project.website)' />
-      </div>
+    <div v-if="project" class="project-card-container">
+        <div class="project-info">
+            <h3>{{ project.name }}</h3>
+            <div>
+                <p>{{ project.description }}</p>
+                <p>{{ project.value }}</p>
+            </div>
+            <p><strong>{{ project.technologies.join(' | ')}}</strong></p>
+            <div class="project-links">
+                <ProjectButton v-if='project.repository' text="Source Code" icon="mdi-iframe" @click='goTo(project.repository)' />
+                <ProjectButton v-if='project.website' text="Website" icon="mdi-eye" @click='goTo(project.website)' />
+            </div>
+        </div>
+        <div class="project-preview">
+            <img class="image-preview" :src="`/${project.preview}`" alt="Translate" />
+        </div>
     </div>
-    <div class="project-preview">
-      <img class="image-preview" :src="`/${project.preview}`" alt="Translate" />
-    </div>
-  </div>
 </template>
 
 <script lang="ts">
@@ -23,17 +23,17 @@ import { Component, Vue, Prop } from "nuxt-property-decorator";
 import ProjectButton from "@/components/ProjectButton.vue";
 import { Project } from "~/utils/interfaces";
 
-@Component({ components: { ProjectButton } })
+@Component( { components: { ProjectButton } } )
 export default class ProjectCard extends Vue {
-  @Prop({ required: true }) project: Project;
+    @Prop( { required: true } ) project: Project;
 
-  mounted() {
-    console.log(this.project);
-  }
+    mounted() {
+        console.log( this.project );
+    }
 
-  goTo(link: string) {
-    window.open(link,'_blank');
-  }
+    goTo( link: string ) {
+        window.open( link,'_blank' );
+    }
 }
 </script>
 
