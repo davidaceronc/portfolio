@@ -27,10 +27,6 @@ import { Project } from "~/utils/interfaces";
 export default class ProjectCard extends Vue {
     @Prop( { required: true } ) project: Project;
 
-    mounted() {
-        console.log( this.project );
-    }
-
     goTo( link: string ) {
         window.open( link,'_blank' );
     }

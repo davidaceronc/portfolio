@@ -14,10 +14,10 @@ import { Component, Vue, Prop } from "nuxt-property-decorator";
 
 @Component( {} )
 export default class ProjectButton extends Vue {
-    @Prop( { default: '' } ) text;
-    @Prop( { default: '' } ) icon;
-    @Prop( { default: 'primary' } ) color;
-    @Prop( { type:Boolean, default: false } ) iconMode;
+    @Prop( { default: '' } ) text: string;
+    @Prop( { default: '' } ) icon: string;
+    @Prop( { default: 'primary' } ) color: string;
+    @Prop( { type:Boolean, default: false } ) iconMode: boolean;
 
 }
 </script>

@@ -3,6 +3,7 @@
     "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "lib": [
       "ESNext",
       "ESNext.AsyncIterable",
@@ -12,6 +13,7 @@
     "allowJs": true,
     "sourceMap": true,
     "strict": true,
+    "strictPropertyInitialization": false,
     "noEmit": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
@@ -24,8 +26,11 @@
       ]
     },
     "types": [
+      "@types/node",
       "@nuxt/types",
-      "@types/node"
+      "@nuxtjs/vuetify",
+      "./index.d.ts",
+      "./vue-module.d.ts"
     ]
   },
   "exclude": [
@@ -34,3 +39,4 @@
     "dist"
   ]
 }
+
