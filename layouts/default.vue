@@ -1,16 +1,16 @@
 <template>
     <v-app class='main-container'>
         <v-parallax
-            height='600'
-            src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+            src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
         >
             <div class='header-info'>
-                <h1 class="text-h4 font-weight-thin mb-4">
-                    David Alexander Ceron
+                <h1 class="text-h3 mb-4">
+                    Hi, I'm David Alexander Ceron
                 </h1>
-                <h4 class="subheading">
-                    Software Developer
-                </h4>
+                <h2 class="subheading">
+                    I am a Software Developer
+                </h2>
+                <p>I'm very passionate about solving complex problems with technology and code.</p>
                 <div class='header-links'>
                     <ProjectButton text="GitHub" icon="mdi-github" color='default' @click='goTo("https://github.com/davidaceronc")' />
                     <ProjectButton text="Linkedin" icon="mdi-linkedin" color='blue white--text' @click='goTo("https://www.linkedin.com/in/davidaceronc/")' />
@@ -33,7 +33,7 @@
             </v-btn>
         </v-fab-transition>
         <v-footer
-            class='primary lighten-2'
+            class='primary lighten-1'
             padless
         >
             <div class='footer-info'>
@@ -86,7 +86,7 @@ export default class Layout extends Vue {
     display: flex;
     flex-flow: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
 
     .header-links {
       margin-top: 30px;

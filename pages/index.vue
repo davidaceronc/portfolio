@@ -2,7 +2,6 @@
     <div>
         <ProjectsList :projects="projects" />
     </div>
-
 </template>
 
 <script lang="ts">

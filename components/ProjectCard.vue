@@ -36,6 +36,7 @@ export default class ProjectCard extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .project-card-container {
+  border-top: solid grey 2px;
   width: 100%;
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
   background: rgb(255, 255, 255);
@@ -52,7 +53,8 @@ export default class ProjectCard extends Vue {
   &:hover {
     box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.3), 0 1em 2em rgba(0, 0, 0, 0.3);
     margin-top: -5px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
+    border-top: solid grey 4px;
   }
 
   .project-info {

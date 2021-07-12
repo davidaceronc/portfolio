@@ -1,6 +1,8 @@
 <template>
     <div class="projects-list-container">
-        <h1>Portfolio</h1>
+        <h1 class='primary--text text-h3 mb-1'>
+            Portfolio
+        </h1>
         <ProjectCard
             v-for="(project, index) in projects"
             :key="index"
