@@ -1,9 +1,11 @@
 <template>
-  <v-btn class="primary project-button-container" @click='$emit("click")'>
-    <v-icon v-if='icon' class='mr-2'>
+  <v-btn :icon='iconMode' :class="color" :style='{ minWidth: iconMode ? "" : "200px" }' @click='$emit("click")'>
+    <v-icon v-if='icon' :class='iconMode ? "" : "mr-2"'>
       {{ icon }}
     </v-icon>
-    {{ text }}
+    <template v-if='!iconMode'>
+      {{ text }}
+    </template>
   </v-btn>
 </template>
 
@@ -14,14 +16,11 @@ import { Component, Vue, Prop } from "nuxt-property-decorator";
 export default class ProjectButton extends Vue {
   @Prop({ default: '' }) text;
   @Prop({ default: '' }) icon;
+  @Prop({ default: 'primary' }) color;
+  @Prop({ type:Boolean, default: false }) iconMode;
+
 }
 </script>
 
 <style scoped lang="scss">
-.project-button-container {
-  min-width: 200px!important;
-  //@media (max-width: 990px) {
-  //  width: 100%;
-  //}
-}
 </style>

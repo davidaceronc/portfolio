@@ -1,5 +1,6 @@
 <template>
   <div class="projects-list-container">
+    <h1>Portfolio</h1>
     <ProjectCard
       v-for="(project, index) in projects"
       :key="index"
@@ -27,6 +28,7 @@ export default class ProjectsList extends Vue {
 <style scoped lang="scss">
 $projects-spacing: 30px;
 .projects-list-container {
+  background-color: whitesmoke;
   display: flex;
   flex-flow: column;
   justify-content: center;

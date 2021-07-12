@@ -1,5 +1,8 @@
 <template>
-  <ProjectsList :projects="projects" />
+  <div>
+    <ProjectsList :projects="projects" />
+  </div>
+
 </template>
 
 <script lang="ts">
@@ -18,4 +21,5 @@ export default class ProjectsPage extends Vue {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

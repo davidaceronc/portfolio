@@ -1,7 +1,7 @@
 <template>
   <div v-if="project" class="project-card-container">
     <div class="project-info">
-      <h2>{{ project.name }}</h2>
+      <h3>{{ project.name }}</h3>
       <div>
         <p>{{ project.description }}</p>
         <p>{{ project.value }}</p>
@@ -56,6 +56,7 @@ export default class ProjectCard extends Vue {
   &:hover {
     box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.3), 0 1em 2em rgba(0, 0, 0, 0.3);
     margin-top: -5px;
+    margin-bottom: 5px;
   }
 
   .project-info {
@@ -68,8 +69,8 @@ export default class ProjectCard extends Vue {
     @media (min-width: 990px) {
       max-width: 480px;
     }
-    h2 {
-      font-size: 2.0em;
+    h3 {
+      font-size: 1.4em;
       //margin: 0 0 15px;
     }
     .project-links {
