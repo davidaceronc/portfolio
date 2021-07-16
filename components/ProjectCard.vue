@@ -38,6 +38,7 @@ export default class ProjectCard extends Vue {
 .project-card-container {
   border-top: solid grey 2px;
   width: 100%;
+  height: 725px;
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
   background: rgb(255, 255, 255);
   border-radius: 1em;
@@ -48,6 +49,7 @@ export default class ProjectCard extends Vue {
 
   @media (min-width: 990px) {
     flex-flow: row;
+    height: 360px;
   }
 
   &:hover {

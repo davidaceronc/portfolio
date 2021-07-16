@@ -9,7 +9,7 @@ export default {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        titleTemplate: '%s - Portfolio',
+        titleTemplate: '%s',
         title: 'Portfolio - David Alexander Ceron',
         htmlAttrs: {
             lang: 'en'
@@ -22,16 +22,16 @@ export default {
                 property: 'og:description',
                 content: 'Software Engineer Personal Portfolio by David Alexander Ceron'
             },
-            { hid: 'og:url', property: 'og:url', content: 'http://david-personal-portfolio.s3-website-us-east-1.amazonaws.com' },
-            { hid: 'og:image', property: 'og:image', content: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80' },
+            { hid: 'og:url', property: 'og:url', content: 'https://serene-thompson-592321.netlify.app' },
+            { hid: 'og:image', property: 'og:image', content: '/Portfolio.jpg' },
             { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
-            { hid: 'twitter:title', name: 'twitter:title', content: ' Translate by Madrov' },
+            { hid: 'twitter:title', name: 'twitter:title', content: ' Portfolio by David Alexander Ceron' },
             {
                 hid: 'twitter:description',
                 name: 'twitter:description',
                 content: 'Software Engineer Personal Portfolio by David Alexander Ceron'
             },
-            { hid: 'twitter:image', name: 'twitter:image', content: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80' }
+            { hid: 'twitter:image', name: 'twitter:image', content: '/Portfolio.jpg' }
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

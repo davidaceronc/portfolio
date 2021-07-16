@@ -24,6 +24,15 @@ export const projects = [
         preview: 'Translate.gif'
     },
     {
+        name: "Spotify Clone",
+        description: `Spotify application with tracks search, reproduction and lyrics.`,
+        value: `Implemented this example to showcase backend with a serverless approach, using Node js and AWS Lambda.`,
+        technologies: ['Typescript', 'React', 'Node js', 'AWS Lambda'],
+        website: 'https://jovial-northcutt-47154b.netlify.app',
+        repository: 'https://github.com/davidaceronc/spotify-clone',
+        preview: 'Spotify.jpg'
+    },
+    {
         name: "Dodoers",
         description: `Web Application that helps to find people to do tasks.`,
         value: `Part of the team that developed the application. Involved in the architectural design of the application.`,
@@ -32,21 +41,12 @@ export const projects = [
         preview: 'Dodoers.gif'
     },
     {
-        name: "Spotify Clone",
-        description: `Spotify application with tracks search, reproduction and lyrics.`,
-        value: `Implemented this example to showcase backend with a serverless approach, using Node js and AWS Lambda.`,
-        technologies: ['Typescript', 'React', 'Node js', 'AWS Lambda and S3'],
-        website: 'http://spotify-clone-frontend.s3-website-us-east-1.amazonaws.com',
-        repository: 'https://github.com/davidaceronc/spotify-clone',
-        preview: 'Spotify.gif'
-    },
-    {
         name: "Portfolio",
         description: `Personal portfolio with a list of projects.`,
         value: `Implemented to showcase the most relevant projects that i've worked on.`,
         technologies: ['Typescript', 'Vue', 'Nuxt'],
-        website: 'http://david-personal-portfolio.s3-website-us-east-1.amazonaws.com',
+        website: 'https://serene-thompson-592321.netlify.app',
         repository: 'https://github.com/davidaceronc/portfolio',
-        preview: 'Portfolio.gif'
+        preview: 'Portfolio.jpg'
     },
 ];
